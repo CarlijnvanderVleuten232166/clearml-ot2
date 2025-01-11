@@ -26,7 +26,7 @@ class Simulation:
         # load a texture
         current_dir = os.getcwd()
         print(f"Current directory: {current_dir}")
-        os.chdir('Documents/Github/2024-25b-fai2-adsai-CarlijnvanderVleuten232166/robotics/Y2B-2023-OT2_Twin')
+        os.chdir('Downloads/clearml-ot2-main/clearml-ot2-main')
         texture_list = os.listdir("textures")
         random_texture = random.choice(texture_list[:-1])
         random_texture_index = texture_list.index(random_texture)
