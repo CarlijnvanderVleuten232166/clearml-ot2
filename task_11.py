@@ -29,7 +29,7 @@ task = Task.init(project_name="Mentor Group S/Group 3", task_name="train-ot2-rl_
 #copy these lines exactly as they are
 #setting the base docker image
 task.set_base_docker('deanis/2023y2b-rl:latest')
-task.set_repository("https://github.com/CarlijnvanderVleuten232166/clearml-ot2")
+#task.set_repository("https://github.com/CarlijnvanderVleuten232166/clearml-ot2")
 #setting the task to run remotely on the default queue
 task.execute_remotely(queue_name="default")
 
