@@ -8,6 +8,9 @@ from stable_baselines3 import PPO
 import wandb
 import argparse
 from clearml import Task
+import os
+
+os.environ["WANDB_API_KEY"] = "9b5bea1c2acd433e22ffba938dc5aaa296e4ade7"
 
 # Initialize OT2 Environment
 env = OT2Env()
