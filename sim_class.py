@@ -26,7 +26,7 @@ class Simulation:
         # load a texture
         current_dir = os.getcwd()
         print(f"Current directory: {current_dir}")
-        if current_dir = r"C:\Users\carli":
+        if current_dir == r"C:\Users\carli":
             os.chdir('Documents/clearml-ot2')
         texture_list = os.listdir("textures")
         random_texture = random.choice(texture_list[:-1])

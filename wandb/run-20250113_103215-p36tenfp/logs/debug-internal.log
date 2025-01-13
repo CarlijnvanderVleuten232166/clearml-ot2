@@ -1,0 +1,9 @@
+{"time":"2025-01-13T10:32:15.8453911+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"C:\\Users\\carli\\Documents\\clearml-ot2\\wandb\\run-20250113_103215-p36tenfp\\logs\\debug-core.log"}
+{"time":"2025-01-13T10:32:15.9678523+01:00","level":"INFO","msg":"created new stream","id":"p36tenfp"}
+{"time":"2025-01-13T10:32:15.9681334+01:00","level":"INFO","msg":"stream: started","id":"p36tenfp"}
+{"time":"2025-01-13T10:32:15.9681334+01:00","level":"INFO","msg":"handler: started","stream_id":"p36tenfp"}
+{"time":"2025-01-13T10:32:15.9681334+01:00","level":"INFO","msg":"sender: started","stream_id":"p36tenfp"}
+{"time":"2025-01-13T10:32:15.9681334+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"p36tenfp"}
+{"time":"2025-01-13T10:32:16.2299094+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-13T10:32:26.2307587+01:00","level":"ERROR","msg":"monitor: memory: error sampling metrics: The parameter is incorrect."}
+{"time":"2025-01-13T10:32:26.2563896+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: could not get CreationDate: The parameter is incorrect.\ncouldn't find pid: 38372"}
