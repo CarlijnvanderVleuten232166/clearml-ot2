@@ -1,0 +1,31 @@
+{
+  "os": "Windows-10-10.0.22621-SP0",
+  "python": "CPython 3.8.0",
+  "startedAt": "2025-01-13T09:29:43.746350Z",
+  "program": "c:/Users/carli/Documents/clearml-ot2/task_11.py",
+  "codePath": "task_11.py",
+  "git": {
+    "remote": "https://github.com/CarlijnvanderVleuten232166/clearml-ot2.git",
+    "commit": "34c5444c7e9518738f4babfdbc611d28426dfdc4"
+  },
+  "email": "232166@buas.nl",
+  "root": "C:\\Users\\carli\\Documents\\clearml-ot2",
+  "host": "Lenovo3i",
+  "executable": "C:\\Users\\carli\\anaconda3\\envs\\computer_vision\\python.exe",
+  "codePathLocal": "task_11.py",
+  "cpu_count": 10,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "509722226688",
+      "used": "421965557760"
+    }
+  },
+  "memory": {
+    "total": "16890978304"
+  },
+  "cpu": {
+    "count": 10,
+    "countLogical": 12
+  }
+}
