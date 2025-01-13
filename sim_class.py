@@ -9,7 +9,7 @@ import random
 #logging.basicConfig(level=logging.INFO)
 
 class Simulation:
-    def __init__(self, num_agents, render=True, rgb_array=False):
+    def __init__(self, num_agents, render=False, rgb_array=False):
         self.render = render
         self.rgb_array = rgb_array
         if render:
@@ -26,7 +26,7 @@ class Simulation:
         # load a texture
         current_dir = os.getcwd()
         print(f"Current directory: {current_dir}")
-        os.chdir('Downloads/clearml-ot2-main/clearml-ot2-main')
+        os.chdir('Documents/clearml-ot2')
         texture_list = os.listdir("textures")
         random_texture = random.choice(texture_list[:-1])
         random_texture_index = texture_list.index(random_texture)
