@@ -27,7 +27,7 @@ class OT2Env(gym.Env):
 
         # Reset the state of the environment to an initial state
         # set a random goal position for the agent, consisting of x, y, and z coordinates within the working area (you determined these values in the previous datalab task)
-        self.goal_position = spaces.Box(low=np.array([-0.188, -0.174, 0.120]), high=np.array([0.254, 0.220, 0.290]), shape=(3,), dtype=np.float32).sample()
+        self.goal_position = spaces.Box(low=np.array([-0.188, -0.174, 0.16950]), high=np.array([0.254, 0.220, 0.290]), shape=(3,), dtype=np.float32).sample()
         # Call the environment reset function
         observation = self.sim.reset(num_agents=1)
         # now we need to process the observation and extract the relevant information, the pipette position, convert it to a numpy array, and append the goal position and make sure the array is of type np.float32
@@ -49,7 +49,6 @@ class OT2Env(gym.Env):
         # Call the environment step function
         observation = self.sim.run([action]) # Why do we need to pass the action as a list? Think about the simulation class.
         self.pipette_position = self.sim.get_pipette_position(int(list(observation.keys())[0].replace("robotId_", "")))  # Store as an attribute
-        self.goal_position = spaces.Box(low=np.array([-0.188, -0.174, 0.120]), high=np.array([0.254, 0.220, 0.290]), shape=(3,), dtype=np.float32).sample()
 
         # now we need to process the observation and extract the relevant information, the pipette position, convert it to a numpy array, and append the goal position and make sure the array is of type np.float32
         observation = np.concatenate([np.array(self.pipette_position, dtype=np.float32), np.array(self.goal_position, dtype=np.float32)])
@@ -60,8 +59,9 @@ class OT2Env(gym.Env):
         # next we need to check if the if the task has been completed and if the episode should be terminated
         # To do this we need to calculate the distance between the pipette position and the goal position and if it is below a certain threshold, we will consider the task complete. 
         # What is a reasonable threshold? Think about the size of the pipette tip and the size of the plants.
-        threshold = 0.0001
+        threshold = 0.001
         if np.linalg.norm(np.array(self.pipette_position, dtype=np.float32) - np.array(self.goal_position, dtype=np.float32)) < threshold:
+            reward += 50
             terminated = True
             # we can also give the agent a positive reward for completing the task
         else:
