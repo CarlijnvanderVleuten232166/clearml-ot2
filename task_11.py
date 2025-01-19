@@ -28,7 +28,7 @@ parser.add_argument("--n_epochs", type=int, default=10)
 args = parser.parse_args()
 
 # Set up clearml
-task = Task.init(project_name="Mentor Group S/Group 3", task_name="train-ot2-rl_group_3")
+task = Task.init(project_name="Mentor Group S/Group 3", task_name="RL_Module_232166")
 #copy these lines exactly as they are
 #setting the base docker image
 task.set_base_docker('deanis/2023y2b-rl:latest')
